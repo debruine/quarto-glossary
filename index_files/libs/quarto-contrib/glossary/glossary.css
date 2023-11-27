@@ -1,0 +1,57 @@
+.glossary {
+  color: purple;
+  text-decoration: underline;
+  cursor: help;
+  position: relative;
+  border: none;
+  padding: 0;
+}
+
+/* only needed for popup = "click" */
+/* popup-definition */
+.glossary .def {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -100px;
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  border-radius: 6px;
+}
+/* show on click */
+.glossary:active .def {
+  display: inline-block;
+}
+/* triangle arrow */
+.glossary:active .def::after {
+  content: ' ';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* glossary table styles */
+.glossary_table td {
+  vertical-align: top;
+}
+
+.glossary_table td:first-child {
+  padding-right: 1em;
+}
+
+.glossary_table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.glossary_table tr:nth-child(even) {
+  background-color: #99999933;
+}
+}

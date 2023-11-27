@@ -1,0 +1,23 @@
+alpha: |
+  The threshold chosen in Neyman-Pearson hypothesis testing to distinguish test results that lead to the decision to reject the null hypothesis, or not, based on the desired upper bound of the Type 1 error rate. An alpha level of 5% is most commonly used, but other alpha levels can be used as long as they are determined and preregistered by the researcher before the data is analyzed.
+
+p-value: |
+  The probability of the observed data, or more extreme data, if the null hypothesis is true. The lower the p-value, the higher the test statistic, and less likely it is to observe the data if the null hypothesis is true.
+
+effect size: |
+  'quantitative reflection of the magnitude of some phenomenon that is used for the purpose of addressing a question of interest' (Kelley & Preacher, 2012)
+
+power: |
+  The probability of rejecting the null hypothesis when it is false, for a specific analysis, effect size, sample size, and criteria for significance.
+
+SESOI: |
+  Smallest Effect Size of Interest: the smallest effect that is theoretically or practically meaningful
+
+  See [Equivalence Testing for Psychological Research](https://doi.org/10.1177/2515245918770963) for a tutorial on methods for choosing an SESOI.
+html: |
+  This is a paragraph with a [link](https://url.com).
+
+  And another paragraph before a list:
+
+  * Item 1
+  * List 2

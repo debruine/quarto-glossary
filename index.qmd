@@ -1,0 +1,122 @@
+---
+title: Quarto-glossary
+format: 
+  html:
+    toc: true
+    toc-expand: true
+glossary:
+  path: glossary.yml
+  popup: click
+  show: true
+---
+
+This extension provides shortcodes for [glossary](https://github.com/debruine/quarto-glossary) in quarto.
+
+
+## Setup
+
+### Installing
+
+```sh
+quarto install extension debruine/quarto-glossary
+```
+
+This will install the extension under the `_extensions` subdirectory.
+If you're using version control, you will want to check in this directory.
+
+
+### Glossary file
+
+You can store definitions in a YAML file. Use markdown to create paragraphs, links, and lists. Make sure each new line in a definition is indented two spaces (sorry YAML is a bit picky, but it's the best human-editable solution).
+
+``` yaml
+SESOI: |
+  Smallest Effect Size of Interest: the smallest effect that is theoretically or practically meaningful
+
+  See [Equivalence Testing for Psychological Research](https://doi.org/10.1177/2515245918770963) for a tutorial on methods for choosing an SESOI.
+p-value: |
+  The probability of the observed data, or more extreme data, if the null hypothesis is true. The lower the p-value, the higher the test statistic, and less likely it is to observe the data if the null hypothesis is true.
+```
+
+### Defaults
+
+In the YAML header of your document, or the _quarto.yml file for your book or website, add the following defaults:
+
+``` yaml
+glossary:
+  path: glossary.yml
+  popup: click
+  show: true
+```
+
+Set path to the path to your glossary YAML file, popup to "click", "hover", or "none", and show to true or false. You can change these defaults for any individual inline glossary item.
+
+
+## Examples
+
+The simplest use starts with the word `glossary` and then the term to be defined. Click on the underlined word to see a pop-up definition.
+
+`{{{< glossary power >}}}`
+
+{{< glossary power >}}
+
+
+### Display
+
+No need to change if you're just using different case:
+
+`{{{< glossary Power >}}}`
+
+{{< glossary Power >}}
+
+Use quotes if your term is more than one word.
+
+`{{{< glossary "effect size" >}}}`
+
+{{< glossary "effect size" >}}
+
+Add a `display` argument if you want to display something different than the term:
+
+`{{{< glossary alpha display="alpha criterion" >}}}`
+
+{{< glossary alpha display="alpha criterion" >}}
+
+### Popups 
+
+`{{{< glossary alpha popup="click" >}}}`
+
+{{< glossary alpha popup="click" >}}
+
+`{{{< glossary alpha popup="hover" >}}}`
+
+{{< glossary alpha popup="hover" >}}
+
+`{{{< glossary alpha popup="none" >}}}`
+
+{{< glossary alpha popup="none" >}}
+
+### Definitions
+
+`{{{< glossary quarto def="An open-source scientific and technical publishing system" >}}}`
+
+{{< glossary quarto def="An open-source scientific and technical publishing system" >}}
+
+### Add to Table
+
+If you don't want to add a glossary item to the table, set `add_to_table=false`.
+
+`{{{< glossary SESOI add_to_table=true >}}}`
+
+{{< glossary SESOI add_to_table=true >}}
+
+`{{{< glossary R def="The best language" add_to_table=false >}}}`
+
+{{< glossary R def="The best language" add_to_table=false >}}
+
+### Table
+
+If you set `table=true`, you will get a glossary table with all the terms you've defined on this page.
+
+`{{{< glossary table=true >}}}`
+
+{{< glossary table=true >}}
