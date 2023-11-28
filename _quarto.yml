@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: Quarto Glossary
+  google-analytics: "G-6NP3MF25W3"
+
+format:
+  html:
+    toc: true
+    toc-expand: true
+    theme:
+      dark: darkly
+      light: flatly
+
+glossary:
+  path: glossary.yml
+  popup: click
+  show: true

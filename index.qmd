@@ -1,14 +1,4 @@
----
-title: Quarto-glossary
-format: 
-  html:
-    toc: true
-    toc-expand: true
-glossary:
-  path: glossary.yml
-  popup: click
-  show: true
----
+# Quarto-glossary
 
 This extension provides shortcodes for [glossary](https://github.com/debruine/quarto-glossary) in quarto.
 
@@ -21,8 +11,7 @@ This extension provides shortcodes for [glossary](https://github.com/debruine/qu
 quarto install extension debruine/quarto-glossary
 ```
 
-This will install the extension under the `_extensions` subdirectory.
-If you're using version control, you will want to check in this directory.
+This will install the extension under the `_extensions` subdirectory. If you're using version control, you will want to check in this directory.
 
 
 ### Glossary file
@@ -83,19 +72,27 @@ Add a `display` argument if you want to display something different than the ter
 
 ### Popups 
 
+The default is "click", which allows you to use styled html in the popup (see [Styles](#styles) below).
+
 `{{{< glossary alpha popup="click" >}}}`
 
 {{< glossary alpha popup="click" >}}
 
-`{{{< glossary alpha popup="hover" >}}}`
+The "hover" option uses the web browser's built-in tooltip styles, so you can't use html in the definitions. However, you can now set the click event to open a link. 
 
-{{< glossary alpha popup="hover" >}}
+`[{{{< glossary alpha popup="hover" >}}}](https://psyteachr.github.io/glossary/a#alpha)`
+
+[{{< glossary alpha popup="hover" >}}](https://psyteachr.github.io/glossary/a#alpha)
+
+Set popup to "none" if you want to add the definition to the glossary table, but not use a popup.
 
 `{{{< glossary alpha popup="none" >}}}`
 
 {{< glossary alpha popup="none" >}}
 
 ### Definitions
+
+If you need to include a definition for a term that is not in the glossary file or is different from the one in the glossary file, you can set the `def` argument.
 
 `{{{< glossary quarto def="An open-source scientific and technical publishing system" >}}}`
 
